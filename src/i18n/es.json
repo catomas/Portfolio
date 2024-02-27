@@ -1,0 +1,63 @@
+{
+  "component": {
+    "introduction": {
+      "hello": "Hola, soy",
+      "name": "Juan Camilo Echeverri 👨🏻‍💻",
+      "description": "Desarrollador de Software",
+      "links": {
+        "contact": "Contáctame",
+        "cv": "Descargar CV"
+      }
+    },
+    "aboutMe": {
+      "title": "Sobre mí",
+      "subtitle": "Conóceme",
+      "description": "Soy un apasionado desarrollador web, graduado en Ingeniería de Sistemas por la Universidad EAFIT. Tras dos años en Perficient, decidí aventurarme como freelance. Además de mi labor como desarrollador, soy el fundador de ContArte, un proyecto dedicado a promover el arte emergente a través de diversas plataformas, donde también lidero un podcast. Fuera del ámbito laboral, me desempeño como jugador de hockey de alto rendimiento y disfruto del anime, las películas, los libros y la música. Mi misión es crear experiencias digitales que cautiven y conecten a las personas en un nivel más profundo, fusionando la tecnología con la creatividad y la pasión.",
+      "advertisement": "Una pequeña pausa para publicidad",
+      "advertisementHide": "¿Quieres saber más sobre ContArte?",
+      "advertisementShow": "!Visita ContArte en nuestras redes 🐉!"
+    },
+    "experience": {
+      "title": "Experiencia",
+      "subtitle": "Skills"
+    },
+    "services": {
+      "title": "Servicios",
+      "subtitle": "Que ofrezco"
+    },
+    "projects": {
+      "title": "Proyectos",
+      "subtitle": "Trabajos recientes"
+    },
+    "contact": {
+      "title": "Contacta conmigo",
+      "subtitle": "Ponté en contacto conmigo",
+      "form": {
+        "name": "Nombre",
+        "email": "Correo",
+        "message": "Mensaje",
+        "send": "Enviar"
+      },
+      "toast": {
+        "success": {
+          "title": "Mensaje enviado",
+          "description": "Gracias por contactarme, te responderé lo más pronto posible."
+        },
+        "error": {
+          "title": "Error al enviar mensaje",
+          "description": "Por favor intenta de nuevo."
+        }
+      }
+    },
+    "footer": {
+      "links": {
+        "home": "Inicio",
+        "aboutMe": "Sobre mí",
+        "experience": "Experiencia",
+        "services": "Servicios",
+        "projects": "Proyectos",
+        "contact": "Contacto"
+      }
+    }
+  }
+}

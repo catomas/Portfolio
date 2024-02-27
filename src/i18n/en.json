@@ -1,0 +1,63 @@
+{
+  "component": {
+    "introduction": {
+      "hello": "Hi, I'm",
+      "name": "Juan Camilo Echeverri 👨🏻‍💻",
+      "description": "Software Developer",
+      "links": {
+        "contact": "Contact Me",
+        "cv": "Download CV"
+      }
+    },
+    "aboutMe": {
+      "title": "About Me",
+      "subtitle": "Know me",
+      "description": "I am a passionate web developer, graduated in Systems Engineering from EAFIT University. After two years at Perficient, I decided to venture into freelancing. In addition to my work as a developer, I am the founder of ContArte, a project dedicated to promoting emerging art through various platforms, where I also lead a podcast. Outside of work, I excel as a high-performance hockey player and enjoy anime, movies, books, and music. My mission is to create digital experiences that captivate and connect people on a deeper level, merging technology with creativity and passion.",
+      "advertisement": "A short advertising break",
+      "advertisementHide": "Do you want to know more about ContArte?",
+      "advertisementShow": "Visit ContArte on our social media 🐉!"
+    },
+    "experience": {
+      "title": "Experience",
+      "subtitle": "Skills"
+    },
+    "services": {
+      "title": "Services",
+      "subtitle": "What I do"
+    },
+    "projects": {
+      "title": "Projects",
+      "subtitle": "My recent work"
+    },
+    "contact": {
+      "title": "Contact Me",
+      "subtitle": "Get in touch",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "send": "Send"
+      },
+      "toast": {
+        "success": {
+          "title": "Message sent",
+          "description": "I'll get back to you as soon as possible"
+        },
+        "error": {
+          "title": "Error",
+          "description": "An error occurred while sending the message"
+        }
+      }
+    },
+    "footer": {
+      "links": {
+        "home": "Home",
+        "aboutMe": "About Me",
+        "experience": "Experience",
+        "services": "Services",
+        "projects": "Projects",
+        "contact": "Contact"
+      }
+    }
+  }
+}
