@@ -159,8 +159,8 @@ export const dataPortfolio = [
     id: 6,
     title: "Portfolio",
     image: "/projects/portfolio.png",
-    urlGithub: "#!",
-    urlDemo: "https://portfolio-jce.vercel.app/es",
+    urlGithub: "https://github.com/catomas/Portfolio",
+    urlDemo: "https://portfolio-jcdev.vercel.app/",
   },
 ];
 
