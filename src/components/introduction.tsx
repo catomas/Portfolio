@@ -25,7 +25,6 @@ export const Introduction = ({ introductionI18n, lang }: IntroductionProps) => {
       <div id="#home" className="text-center">
         <h3 className=" text-2xl mb-3">{introductionI18n.hello}</h3>
         <h1 className=" text-4xl font-bold mb-3">{introductionI18n.name}</h1>
-        <h1>JC DEV</h1>
         <h2 className=" text-xl text-gray-400 ">
           {introductionI18n.description}
         </h2>

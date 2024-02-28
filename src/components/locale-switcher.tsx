@@ -35,7 +35,7 @@ const LocaleSwitcher = () => {
   }, [selectedLocale, router, redirectedPathName]);
 
   return (
-    <div className="flex items-end justify-end mt-10 mr-20 ">
+    <div className="flex  justify-center items-center  sm:justify-end mt-10 mx-10  ">
       <div>
         <Select value={selectedLocale} onValueChange={setSelectedLocale}>
           <SelectTrigger className=" mr-3">
