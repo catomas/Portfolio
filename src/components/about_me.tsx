@@ -6,6 +6,9 @@ import { TextRevealCard } from "./ui/text-reveal-card";
 import { FiInstagram } from "react-icons/fi";
 import { FaSpotify } from "react-icons/fa";
 import Link from "next/link";
+import { ActiveSectionContext } from "@/context/active-section-context";
+import { useContext, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 interface AboutMeProps {
   aboutMeI18n: {
@@ -22,8 +25,24 @@ export const AboutMe = ({ aboutMeI18n }: AboutMeProps) => {
   const pathName = usePathname();
   const dataAboutMeLang = dataAboutMe[pathName === "/es" ? 0 : 1];
 
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
+
+  const { setActiveId } = useContext(ActiveSectionContext);
+
+  useEffect(() => {
+    if (inView) {
+      setActiveId(2);
+    }
+  }, [inView, setActiveId]);
+
   return (
-    <div className="p-6 md:px-12 md:py-30 max-w-5xl mx-auto" id="about_me">
+    <div
+      className="p-6 md:px-12 md:py-30 max-w-5xl mx-auto"
+      ref={ref}
+      id="about_me"
+    >
       <Title title={aboutMeI18n.title} subTitle={aboutMeI18n.subtitle} />
 
       <div className="grid md:grid-cols-3 mt-7  gap-4">

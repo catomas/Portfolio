@@ -1,7 +1,12 @@
+"use client";
+
 import { dataExperience } from "@/lib/data";
 import { Title } from "./title";
 import { BadgeCheck } from "lucide-react";
 import { Progress } from "./ui/progress";
+import { useInView } from "react-intersection-observer";
+import { ActiveSectionContext } from "@/context/active-section-context";
+import { useContext, useEffect } from "react";
 
 interface ExperienceProps {
   experienceI18n: {
@@ -11,8 +16,22 @@ interface ExperienceProps {
 }
 
 export const Experience = ({ experienceI18n }: ExperienceProps) => {
+  const { ref, inView } = useInView({});
+
+  const { setActiveId } = useContext(ActiveSectionContext);
+
+  useEffect(() => {
+    if (inView) {
+      setActiveId(3);
+    }
+  }, [inView, setActiveId]);
+
   return (
-    <div className="p-6 md:px-12 md:py-44 max-w-5xl mx-auto" id="experience">
+    <div
+      className="p-6 md:px-12 md:py-44 max-w-5xl mx-auto"
+      id="experience"
+      ref={ref}
+    >
       <Title title={experienceI18n.title} subTitle={experienceI18n.subtitle} />
 
       <div className="grid md:grid-cols-2 gap-8 mt-5">

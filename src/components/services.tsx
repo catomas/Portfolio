@@ -1,10 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Title } from "./title";
 import { dataServices } from "@/lib/data";
 import { Check } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { ActiveSectionContext } from "@/context/active-section-context";
+import { useInView } from "react-intersection-observer";
 
 interface ServicesProps {
   servicesI18n: {
@@ -14,11 +16,25 @@ interface ServicesProps {
 }
 
 export const Services = ({ servicesI18n }: ServicesProps) => {
+  const { ref, inView } = useInView({});
+
+  const { setActiveId } = useContext(ActiveSectionContext);
+
+  useEffect(() => {
+    if (inView) {
+      setActiveId(4);
+    }
+  }, [inView, setActiveId]);
+
   const pathName = usePathname();
   const dataServicesLang = dataServices[pathName === "/es" ? 0 : 1];
 
   return (
-    <div className="p-6 md:px-12 md:py-24 max-w-5xl mx-auto" id="services">
+    <div
+      className="p-6 md:px-12 md:py-24 max-w-5xl mx-auto"
+      id="services"
+      ref={ref}
+    >
       <Title title={servicesI18n.title} subTitle={servicesI18n.subtitle} />
 
       <div className="grid md:grid-cols-3 gap-5 mt-7">

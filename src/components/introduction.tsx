@@ -1,8 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
 import { Mail, Paperclip } from "lucide-react";
 import { Container } from "./container";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useInView } from "react-intersection-observer";
+import { ActiveSectionContext } from "@/context/active-section-context";
+import { useContext, useEffect } from "react";
 
 interface IntroductionProps {
   lang: string;
@@ -20,9 +25,21 @@ interface IntroductionProps {
 export const Introduction = ({ introductionI18n, lang }: IntroductionProps) => {
   const cvpdf = lang === "es" ? "cv/cv_es.pdf" : "cv/cv_en.pdf";
 
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
+
+  const { setActiveId } = useContext(ActiveSectionContext);
+
+  useEffect(() => {
+    if (inView) {
+      setActiveId(1);
+    }
+  }, [inView, setActiveId]);
+
   return (
     <Container>
-      <div id="#home" className="text-center">
+      <div id="#home" ref={ref} className="text-center scroll-mt-[100rem]">
         <h3 className=" text-2xl mb-3">{introductionI18n.hello}</h3>
         <h1 className=" text-4xl font-bold mb-3">{introductionI18n.name}</h1>
         <h1>JC DEV</h1>

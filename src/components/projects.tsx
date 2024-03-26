@@ -1,3 +1,5 @@
+"use client";
+
 import { dataPortfolio } from "@/lib/data";
 import { Title } from "./title";
 import Image from "next/image";
@@ -5,6 +7,9 @@ import Link from "next/link";
 import { IoLogoGithub } from "react-icons/io5";
 import { buttonVariants } from "./ui/button";
 import { CgLivePhoto } from "react-icons/cg";
+import { ActiveSectionContext } from "@/context/active-section-context";
+import { useContext, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 interface ProjectsProps {
   projectsI18n: {
@@ -14,8 +19,18 @@ interface ProjectsProps {
 }
 
 export const Projects = ({ projectsI18n }: ProjectsProps) => {
+  const { ref, inView } = useInView({});
+
+  const { setActiveId } = useContext(ActiveSectionContext);
+
+  useEffect(() => {
+    if (inView) {
+      setActiveId(5);
+    }
+  }, [inView, setActiveId]);
+
   return (
-    <div className="p-4 max-w-4xl md:py-24 mx-auto" id="projects">
+    <div className="p-4 max-w-4xl md:py-24 mx-auto" id="projects" ref={ref}>
       <Title title={projectsI18n.title} subTitle={projectsI18n.subtitle} />
 
       <div className="grid md:grid-cols-3 gap-14 mt-4">

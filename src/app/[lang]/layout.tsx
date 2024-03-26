@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "../globals.css";
 import { Locale, i18n } from "@/i18n.config";
 import { Toaster } from "@/components/ui/toaster";
+import { ActiveSectionContextProvider } from "@/context/active-section-context";
 
 const montSerrat = Montserrat({
   weight: "500",
@@ -27,7 +28,9 @@ export default function RootLayout({
   return (
     <html lang={params.lang}>
       <body className={montSerrat.className}>
-        <main>{children}</main>
+        <ActiveSectionContextProvider>
+          <main>{children}</main>
+        </ActiveSectionContextProvider>
         <Toaster />
       </body>
     </html>
