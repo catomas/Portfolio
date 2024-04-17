@@ -4,7 +4,7 @@ import { Title } from "./title";
 import { usePathname } from "next/navigation";
 import { TextRevealCard } from "./ui/text-reveal-card";
 import { FiInstagram } from "react-icons/fi";
-import { FaSpotify } from "react-icons/fa";
+import { FaSpotify, FaYoutube } from "react-icons/fa";
 import Link from "next/link";
 import { ActiveSectionContext } from "@/context/active-section-context";
 import { useContext, useEffect } from "react";
@@ -77,7 +77,15 @@ export const AboutMe = ({ aboutMeI18n }: AboutMeProps) => {
               >
                 <FiInstagram size={30} />
               </Link>
-              <FaSpotify size={30} />
+              <Link
+                href="https://open.spotify.com/show/2zEb2x6P50QQ07vzI9gbaZ?si=6ce8d3fbf7184ea7"
+                target="_blank"
+              >
+                <FaSpotify size={30} />
+              </Link>
+              <Link href="https://www.youtube.com/@ContArte4" target="_blank">
+                <FaYoutube size={30} />
+              </Link>
             </div>
           </div>
         </TextRevealCard>
