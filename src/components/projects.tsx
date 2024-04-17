@@ -37,7 +37,7 @@ export const Projects = ({ projectsI18n }: ProjectsProps) => {
         {dataPortfolio.map((data) => (
           <div key={data.id}>
             <h3 className="text-xl mb-4">{data.title}</h3>
-            <div className=" md:h-[180px]">
+            <div className=" md:h-[180px] mx-auto  ">
               <Image
                 src={data.image}
                 alt={data.title}

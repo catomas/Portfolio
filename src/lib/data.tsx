@@ -135,6 +135,13 @@ export const dataPortfolio = [
     urlDemo: "https://kuro-shop.vercel.app/",
   },
   {
+    id: 7,
+    title: "iPhone 15 Page",
+    image: "/projects/Iphone.png",
+    urlGithub: "https://github.com/catomas/iPhone-web",
+    urlDemo: "https://i-phone-web.vercel.app/",
+  },
+  {
     id: 3,
     title: "Chat Web App",
     image: "/projects/chatweb.png",
