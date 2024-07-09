@@ -121,6 +121,13 @@ export const itemsNavbar = [
 
 export const dataPortfolio = [
   {
+    id: 8,
+    title: "Linguify",
+    image: "/projects/linguify.png",
+    urlGithub: "https://github.com/catomas/linguify",
+    urlDemo: "https://linguify-snowy.vercel.app",
+  },
+  {
     id: 1,
     title: "JCE Avaluos Portfolio",
     image: "/projects/JCEAvaluos.png",
